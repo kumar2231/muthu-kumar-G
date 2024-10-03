@@ -1,0 +1,24 @@
+def display_salaries(employees):
+    print("\nEmployee Salaries:")
+    print("-------------------")
+    for name, salary in employees.items():
+        print(f"{name}: ${salary:.2f}")
+
+def main():
+    employees = {}
+
+    while True:
+        name = input("Enter the employee's name (or type 'exit' to finish): ")
+        if name.lower() == 'exit':
+            break
+        
+        try:
+            salary = float(input(f"Enter the salary for {name}: "))
+            employees[name] = salary
+        except ValueError:
+            print("Please enter a valid salary.")
+
+    display_salaries(employees)
+
+if __name__ == "__main__":
+    main()
