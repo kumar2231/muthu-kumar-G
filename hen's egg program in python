@@ -1,0 +1,16 @@
+def calculate_eggs_per_week(eggs_per_week, weeks):
+    """Calculate the total number of eggs laid over a given number of weeks."""
+    return eggs_per_week * weeks
+
+# Get user input
+try:
+    eggs_per_week = int(input("Enter the number of eggs laid per week: "))
+    weeks = int(input("Enter the number of weeks: "))
+
+    if eggs_per_week < 0 or weeks < 0:
+        print("Please enter non-negative values.")
+    else:
+        total_eggs = calculate_eggs_per_week(eggs_per_week, weeks)
+        print(f"Total number of eggs laid in {weeks} weeks: {total_eggs}")
+except ValueError:
+    print("Please enter valid integers.")
