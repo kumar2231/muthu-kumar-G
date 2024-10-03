@@ -1,0 +1,14 @@
+def sort_descending(numbers):
+    return sorted(numbers, reverse=True)
+
+# Get user input
+try:
+    user_input = input("Enter numbers separated by spaces: ")
+    # Convert input string to a list of floats
+    numbers = list(map(float, user_input.split()))
+
+    # Sort and display the numbers in descending order
+    sorted_numbers = sort_descending(numbers)
+    print("Numbers in descending order:", sorted_numbers)
+except ValueError:
+    print("Please enter valid numbers.")
