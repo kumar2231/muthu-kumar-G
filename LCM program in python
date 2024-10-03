@@ -1,0 +1,20 @@
+def gcd(x, y):
+    """Calculate the Greatest Common Divisor (GCD) of x and y."""
+    while y:
+        x, y = y, x % y
+    return x
+
+def lcm(x, y):
+    """Calculate the Least Common Multiple (LCM) of x and y."""
+    return abs(x * y) // gcd(x, y)
+
+# Get user input
+try:
+    num1 = int(input("Enter the first number: "))
+    num2 = int(input("Enter the second number: "))
+
+    # Calculate and display the LCM
+    result = lcm(num1, num2)
+    print(f"The Least Common Multiple of {num1} and {num2} is: {result}")
+except ValueError:
+    print("Please enter valid integers.")
